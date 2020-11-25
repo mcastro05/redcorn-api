@@ -83,6 +83,14 @@ const manifest = {
                 routes: {
                     prefix: Config.get('/routes/prefix')
                 }
+            },
+            {
+                plugin: './server/plugins/rate-limiter',
+                options: {
+                    max: 2, // max 900 requests per hour
+                    duration: 3600000 * 24, // 24 hrs in milliseconds
+                    // redis: {}  // add Redis config here
+                }
             }
         ]
     }

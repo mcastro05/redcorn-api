@@ -7,8 +7,7 @@ const Request = require('promise-request-retry');
 
 exports.plugin = {
     name: 'api',
-    register: function (server) {
-
+    register: async function (server) {
         server.route([
             {
                 method: 'GET',
