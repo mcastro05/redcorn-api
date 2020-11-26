@@ -6,7 +6,6 @@ const RequestIp = require('request-ip')
 const RateLimiter = require('async-ratelimiter')
 
 async function register (server, options) {  
-    console.log(options);
     const config = Object.assign({},
         {
         namespace: 'hapi-rate-limitor',
